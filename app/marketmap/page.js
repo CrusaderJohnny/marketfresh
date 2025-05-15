@@ -1,5 +1,7 @@
+import Market from "./market";
+
 export default function Page() {
     return(
-        <p>Fresh Map</p>
+        <Market/>
     )
 }
