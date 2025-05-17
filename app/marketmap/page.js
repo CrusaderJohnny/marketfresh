@@ -1,7 +1,7 @@
-import Market from "./market";
+import MarketList from "./marketList";
 
 export default function Page() {
     return(
-        <Market/>
+        <MarketList/>
     )
 }
