@@ -10,6 +10,7 @@ export default function Home() {
         <button className="w-50 h-15 bg-white text-black border-2" onClick={() => router.push("marketmap")}>Tika taka toey</button>
         <button className="w-50 h-15 bg-white text-black border-2" onClick={() => router.push("map")}>Map button</button>
         <button className="w-50 h-15 bg-white text-black border-2" onClick={() => router.push("stickyHeaderAndCompTest")}>Header</button>
+        <button className="w-50 h-15 bg-white text-black border-2" onClick={() => router.push("index")}>Index</button>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
       </footer>
