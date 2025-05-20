@@ -2,6 +2,8 @@
 import Image from "next/image"
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { Button } from "@mantine/core";
+import { IconArrowRight } from "@tabler/icons-react";
 
 export default function Market() {
     const router = useRouter();
@@ -51,12 +53,9 @@ export default function Market() {
 
         {/* Arrow at the bottom left */}
             <div className="absolute bottom-0.5 right-2">
-                <p className="text-black flex flex-row items-center">
-                    Directions
-                    <button onClick={() => router.push('/')}>
-                    <Image src={arrow} alt="To Maps" width={40} height={40} />
-                    </button>
-                </p>
+                    <Button variant="defualt" rightSection={<IconArrowRight size={14}/>} onClick={() => router.push('/')}>
+                        Directions
+                    </Button>
             </div>
         </div>
     );
