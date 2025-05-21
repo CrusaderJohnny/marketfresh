@@ -1,6 +1,8 @@
 'use client';
 import React, { useRef } from 'react';
 import Nav from '../_components/nav/Nav'
+import Link from 'next/link';
+import {Button} from "@mantine/core";
 
 export default function TestableStickyHeader() {
     const marketRef = useRef(null);
@@ -24,9 +26,9 @@ export default function TestableStickyHeader() {
                     <p className='text-[gray] mb-[15px]'>
                         This is the home section of the page, featuring a stunning background image.
                     </p>
-                    <button className='bg-amber-500 w-[150px] h-[45px] rounded-[5px] text-white cursor-pointer'>
+                    <Button component={Link} href="/" className='bg-amber-500 w-[150px] h-[45px] rounded-[5px] text-white cursor-pointer'>
                         Learn More
-                    </button>
+                    </Button>
                 </div>
             </section>
 
