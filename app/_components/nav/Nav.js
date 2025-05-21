@@ -1,6 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { Button } from '@mantine/core';
+import Link from 'next/link';
 
 function Nav({ onNavigate, refs }) {
     const [header, setHeader] = useState(false);
@@ -41,13 +43,15 @@ function Nav({ onNavigate, refs }) {
                     style={{ objectFit: 'cover' }}
                     priority
                 />
-
+                <Button variant='default' fullWidth size='xl' component={Link} href="/">
                 <div className="logo text-[24px]">
                     <h2>Market</h2>
                     <div className="pl-[50px]">
                         <h2>Fresh</h2>
                     </div>
                 </div>
+                </Button>
+
 
                 <div className="menu">
                     <nav className="">
