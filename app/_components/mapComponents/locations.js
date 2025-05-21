@@ -1,18 +1,6 @@
-/*
-Written by Mace Howald 05-20-2025
-Used Gemini to assist in debugging
-
-
-
-*/
-
-"use client"
 import React from 'react';
-import Nav from '../_components/nav/Nav';
-import MapComponent from '../_components/mapComponents/map';
 
-
-const locations = [
+export const MapLocations = [
     {key: 'operaHouse', location: { lat: -33.8567844, lng: 151.213108  }},
     {key: 'tarongaZoo', location: { lat: -33.8472767, lng: 151.2188164 }},
     {key: 'manlyBeach', location: { lat: -33.8209738, lng: 151.2563253 }},
@@ -29,14 +17,3 @@ const locations = [
     {key: 'darlingHarbour', location: { lat: -33.87488, lng: 151.1987113 }},
     {key: 'barangaroo', location: { lat: - 33.8605523, lng: 151.1972205 }},
 ];
-
-
-export default function App() {
-
-    return (
-        <div>
-            <Nav></Nav>
-            <MapComponent></MapComponent>
-        </div>
-    );
-};
