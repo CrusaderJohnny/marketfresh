@@ -27,6 +27,7 @@ const charactersList = [
         link: "https://www.dalhousiecalgary.ca/farmers-market/",
     },
 ];
+//displays the information before the accordion is opened
 function AccordionLabel({ label, image, description }) {
     return (<Group wrap="nowrap">
         <Avatar src={image} radius="xl" size="lg"/>
@@ -38,6 +39,7 @@ function AccordionLabel({ label, image, description }) {
         </div>
     </Group>);
 }
+//displays the accordion information. essentially a read more pop out
 export default function MarketAccordion() {
     const items = charactersList.map((item) => (<AccordionItem value={item.id} key={item.label}>
         <AccordionControl>
@@ -57,4 +59,4 @@ export default function MarketAccordion() {
     </Accordion>
     </Container>
     );
-}
+};

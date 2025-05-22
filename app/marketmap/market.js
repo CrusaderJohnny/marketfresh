@@ -2,7 +2,7 @@
 import Image from "next/image"
 import { Button, Text, Card, Spoiler, Container, Flex, Grid } from "@mantine/core";
 import Link from "next/link";
-
+//market card for listing markets, utilizes container to set size of card, grid to align items and a spoiler to hide information for a more info button
 export default function Market() {
     const profpic = require("../assets/CFMLogo.png");
     return(
