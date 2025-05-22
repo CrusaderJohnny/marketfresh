@@ -30,7 +30,7 @@ const PoiMarkers = ({pois}) => {
     );
 };
 
-function MapComponent({width,height}) {
+function MapComponent() {
 
     // Get API key
     const Maps_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
@@ -42,9 +42,8 @@ function MapComponent({width,height}) {
     }
 
     return (
-        <div>
             <APIProvider apiKey={Maps_API_KEY} onLoad={() => console.log('Maps API has loaded.')}>
-                <div style={{ height: height, width: width, alignSelf: "center" }}>
+                <div style={{width: '100%', height: '500px', flexGrow: 1}}>
                     <Map
                         defaultZoom={13}
                         mapId='DEMO_MAP_ID'
@@ -53,7 +52,6 @@ function MapComponent({width,height}) {
                     </Map>
                 </div>
             </APIProvider>
-        </div>
     );
 };
 
