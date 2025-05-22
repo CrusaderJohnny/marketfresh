@@ -1,25 +1,26 @@
-import { Group, Avatar, Text, Accordion } from '@mantine/core';
+import { Group, Avatar, Text, Accordion, AccordionItem, AccordionControl, AccordionPanel, Container } from '@mantine/core';
 const charactersList = [
+    //all information taken from respective websites for each individual farmers market. Pictures taken from their websites. Image URL was copied as well as description and content was taken from the websites for each respective market
     {
-        id: 'bender',
-        image: 'https://img.icons8.com/clouds/256/000000/futurama-bender.png',
-        label: 'Bender Bending Rodríguez',
-        description: 'Fascinated with cooking, though has no sense of taste',
-        content: "Bender Bending Rodríguez, (born September 4, 2996), designated Bending Unit 22, and commonly known as Bender, is a bending unit created by a division of MomCorp in Tijuana, Mexico, and his serial number is 2716057. His mugshot id number is 01473. He is Fry's best friend.",
+        id: 'cfm',
+        image: 'https://calgary-farmers-market-v1747430046.websitepro-cdn.com/wp-content/uploads/2024/01/CFM-logo@2x.png',
+        label: 'Calgary Farmers Market',
+        description: 'Home to over 100 incredible local vendors.',
+        content: "In the spirit of reconciliation, we acknowledge we live, work, and play on the traditional territories of the Blackfoot Confederacy (Siksika, Kainai, Piikani), the Tsuut’ina, the Îyâxe Nakoda Nations, the Métis Nation (Region 3), and all people who make their homes in the Treaty 7 region of Southern Alberta.",
     },
     {
-        id: 'carol',
-        image: 'https://img.icons8.com/clouds/256/000000/futurama-mom.png',
-        label: 'Carol Miller',
-        description: 'One of the richest people on Earth',
-        content: "Carol Miller (born January 30, 2880), better known as Mom, is the evil chief executive officer and shareholder of 99.7% of Momcorp, one of the largest industrial conglomerates in the universe and the source of most of Earth's robots. She is also one of the main antagonists of the Futurama series.",
+        id: 'cochrane',
+        image: 'https://www.albertafarmersmarket.com/wp-content/uploads/Cochrane1-2-wpcf_225x225.jpg',
+        label: 'Cochrane Farmers’ Market',
+        description: 'The market in the heart of Big Hill Country',
+        content: "The Cochrane Environmental Action Committee (CEAC) sponsors and operates the Cochrane Farmers’ Market. The market is run entirely by CEAC volunteers, and proceeds from the market are used to support CEAC in its efforts to make Cochrane a more environmentally aware and active community.",
     },
     {
-        id: 'homer',
-        image: 'https://img.icons8.com/clouds/256/000000/homer-simpson.png',
-        label: 'Homer Simpson',
-        description: 'Overweight, lazy, and often ignorant',
-        content: 'Homer Jay Simpson (born May 12) is the main protagonist and one of the five main characters of The Simpsons series(or show). He is the spouse of Marge Simpson and father of Bart, Lisa and Maggie Simpson.',
+        id: 'dalhousie',
+        image: 'https://www.albertafarmersmarket.com/wp-content/uploads/DalhousieFarmersMarketLogo-wpcf_225x225.png',
+        label: 'Dalhousie Farmers’ Market',
+        description: 'The Dalhousie Farmers’ Market adhere’s to the “Made, Baked, or Grown” in Alberta Rule.',
+        content: 'The Dalhousie Farmers’ Market adhere’s to the “Made, Baked, or Grown” in Alberta Rule. 80% of our vendors must have products that are Alberta Made, Baked or Grown. We are an Approved Farmer’s Market and follow rules and regulations set by the Alberta Agricultural Society. By hosting a market, Dalhousie is enabling entrepreneurs to test their products and ideas while keeping costs low, interacting with the community, and learning new business skills. All funds raised by this market will go directly towards community improvement projects.',
     },
 ];
 function AccordionLabel({ label, image, description }) {
@@ -34,15 +35,19 @@ function AccordionLabel({ label, image, description }) {
     </Group>);
 }
 export default function MarketAccordion() {
-    const items = charactersList.map((item) => (<Accordion.Item value={item.id} key={item.label}>
-        <Accordion.Control>
+    const items = charactersList.map((item) => (<AccordionItem value={item.id} key={item.label}>
+        <AccordionControl>
             <AccordionLabel {...item}/>
-        </Accordion.Control>
-        <Accordion.Panel>
+        </AccordionControl>
+        <AccordionPanel>
             <Text size="sm">{item.content}</Text>
-        </Accordion.Panel>
-        </Accordion.Item>));
-        return (<Accordion chevronPosition="right" variant="contained">
+        </AccordionPanel>
+        </AccordionItem>));
+        return (
+    <Container>
+        <Accordion chevronPosition="right" variant="contained">
         {items}
-    </Accordion>);
+    </Accordion>
+    </Container>
+    );
 }
