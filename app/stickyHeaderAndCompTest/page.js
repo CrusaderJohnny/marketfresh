@@ -1,89 +1,112 @@
-'use client';
-import React, { useRef } from 'react';
-import Nav from '../_components/nav/Nav'
-import Link from 'next/link';
-import {Button} from "@mantine/core";
+/*
+    Author: Daniel Asefa
+    Page: Demo Mantine header with nav on page
+    This page is an example implementation of how many components can be placed around the page
+    
+    References:
+    Used official Mantine Documentation for creating headers
 
-export default function TestableStickyHeader() {
-    const marketRef = useRef(null);
-    const categoriesRef = useRef(null);
-    const newsRef = useRef(null);
-    const vendorRef = useRef(null);
-    const contactRef = useRef(null);
+*/
 
-    const scrollToSection = (ref) => {
-        ref.current?.scrollIntoView({ behavior: 'smooth' });
-    };
+"use client"
+import NavMT from '../_components/nav/NavMT';
+import { AppShell, useMantineTheme, Container, Title, Text, Box } from '@mantine/core';
+
+import BoxComp from '../_components/otherComponents/boxComp'
+
+export default function MantineNavPage() {
+    const theme = useMantineTheme()
+    const headerHeightVh = 14;
 
     return (
-        <div>
-            <Nav onNavigate={scrollToSection} refs={{ marketRef, categoriesRef, newsRef, vendorRef, contactRef }} />
+        <>
+            <AppShell
+                header={{ height: '14vh' }}
+            >
+                <NavMT />
 
-            {/* HomeRef Section */}
-            <section ref={marketRef} id="home" className='relative h-[100vh] bg-gray-300 flex justify-center items-center flex-col text-center'>
-                <div className='relative z-10 text-white p-4'> 
-                    <h2 className='text-[28px] text-[black] font-bold mb-[25px]'>Home Content</h2>
-                    <p className='text-[gray] mb-[15px]'>
-                        This is the home section of the page, featuring a stunning background image.
-                    </p>
-                    <Button component={Link} href="/" className='bg-amber-500 w-[150px] h-[45px] rounded-[5px] text-white cursor-pointer'>
-                        Learn More
-                    </Button>
-                </div>
-            </section>
+                <AppShell.Main>
+                    <Container size="lg" >
 
-            {/* Categories Section */}
-            <section ref={categoriesRef} id="home" className='relative h-[100vh] bg-gray-500 flex justify-center items-center flex-col text-center'>
-                <div className='relative z-10 text-white p-4'> 
-                    <h2 className='text-[28px] text-[black] font-bold mb-[25px]'>categories Content</h2>
-                    <p className='text-[gray] mb-[15px]'>
-                        This is the home section of the page, featuring a stunning background image.
-                    </p>
-                    <button className='bg-amber-500 w-[150px] h-[45px] rounded-[5px] text-white cursor-pointer'>
-                        Learn More
-                    </button>
-                </div>
-            </section>
+                        {/* Section 1 - Markets */}
+                        <Box
+                            id="section1"
+                            style={{
+                                minHeight: '86vh',
+                                backgroundColor: theme.colors.green[3], // Color added to show size of Box (Delete later)
+                                scrollMarginTop: `${headerHeightVh}vh`,
+                            }}
+                        >
+                            <Title order={2}>Section 1: Markets</Title>
+                            <Text>
+                                This section is for testing Market Components
+                            </Text>
+                        </Box>
 
-            {/* News Section */}
-            <section ref={newsRef} id="home" className='relative h-[100vh] bg-gray-300 flex justify-center items-center flex-col text-center'>
-                <div className='relative z-10 text-white p-4'> 
-                    <h2 className='text-[28px] text-[black] font-bold mb-[25px]'>News Content</h2>
-                    <p className='text-[gray] mb-[15px]'>
-                        This is the home section of the page, featuring a stunning background image.
-                    </p>
-                    <button className='bg-amber-500 w-[150px] h-[45px] rounded-[5px] text-white cursor-pointer'>
-                        Learn More
-                    </button>
-                </div>
-            </section>
+                        {/* Section 2 */}
+                        <Box
+                            id="section2"
+                            style={{
+                                minHeight: '86vh',
+                                backgroundColor: theme.colors.green[0],
+                                scrollMarginTop: `${headerHeightVh}vh`,
+                            }}
+                        >
+                            {/* <Title order={2}>Section 2: Categories</Title> */}
+                            <BoxComp />
+                            {/* <Text>
+                                This section is for testing Categories Components
+                            </Text> */}
+                        </Box>
 
-            {/* Vendor Section */}
-            <section ref={vendorRef} id="home" className='relative h-[100vh] bg-gray-500 flex justify-center items-center flex-col text-center'>
-                <div className='relative z-10 text-white p-4'> 
-                    <h2 className='text-[28px] text-[black] font-bold mb-[25px]'>Vendor Content</h2>
-                    <p className='text-[gray] mb-[15px]'>
-                        This is the home section of the page, featuring a stunning background image.
-                    </p>
-                    <button className='bg-amber-500 w-[150px] h-[45px] rounded-[5px] text-white cursor-pointer'>
-                        Learn More
-                    </button>
-                </div>
-            </section>
+                        {/* Section 3 */}
+                        <Box
+                            id="section3"
+                            style={{
+                                minHeight: '86vh',
+                                backgroundColor: theme.colors.green[3],
+                                scrollMarginTop: `${headerHeightVh}vh`,
+                            }}
+                        >
+                            <Title order={2}>Section 3: News</Title>
+                            <Text>
+                                This section is for testing News Components
+                            </Text>
+                        </Box>
 
-            {/* Contact Section */}
-            <section ref={contactRef} id="home" className='relative h-[100vh] bg-gray-300 flex justify-center items-center flex-col text-center'>
-                <div className='relative z-10 text-white p-4'> 
-                    <h2 className='text-[28px] text-[black] font-bold mb-[25px]'>contact Content</h2>
-                    <p className='text-[gray] mb-[15px]'>
-                        This is the home section of the page, featuring a stunning background image.
-                    </p>
-                    <button className='bg-amber-500 w-[150px] h-[45px] rounded-[5px] text-white cursor-pointer'>
-                        Learn More
-                    </button>
-                </div>
-            </section>
+                        {/* Section 4 */}
+                        <Box
+                            id="section4"
+                            style={{
+                                minHeight: '86vh',
+                                backgroundColor: theme.colors.green[0],
+                                scrollMarginTop: `${headerHeightVh}vh`,
+                            }}
+                        >
+                            <Title order={2}>Section 4: Vendors</Title>
+                            <Text>
+                                This section is for testing Vendor Components
+                            </Text>
+                        </Box>
 
-        </div>
+                        {/* Section 5 */}
+                        <Box
+                            id="section5"
+                            style={{
+                                minHeight: '86vh',
+                                backgroundColor: theme.colors.green[3],
+                                scrollMarginTop: `${headerHeightVh}vh`,
+                            }}
+                        >
+                            <Title order={2}>Section 5: Contact</Title>
+                            <Text>
+                                This section is for testing Contact Components
+                            </Text>
+                        </Box>
+                    </Container>
+                </AppShell.Main>
+
+            </AppShell>
+        </>
     );
 }

@@ -1,3 +1,11 @@
+// Deprecated
+
+// Author: Daniel Asefa
+// Reference: 
+// Used youtube video as a base for how to create a sticky header
+// https://www.youtube.com/watch?v=YHMyYgaaEm8
+// 
+
 'use client';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
