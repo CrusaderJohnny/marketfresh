@@ -1,8 +1,8 @@
 /*
 Written by Mace Howald 05-20-2025
 Used Gemini to assist in debugging
-
-
+Header image from "https://letspasta.com/wp-content/uploads/2022/08/Alberta-farming.jpg"
+Used Mantine component library
 
 */
 
@@ -11,7 +11,7 @@ import React from 'react';
 import Nav from '../_components/nav/Nav';
 import MapComponent from '../_components/mapComponents/map';
 import MarketAccordion from "../marketmap/marketList";
-import { AppShell, Button, Flex, ScrollArea } from '@mantine/core';
+import { Text, AppShell, Button, Center, Flex, ScrollArea , AppShellMain, AppShellNavbar, AppShellHeader, BackgroundImage } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
 
@@ -19,6 +19,8 @@ export default function App() {
 
     const [mobileOpened, { toggle: toggleMobile }] = useDisclosure();
     const [desktopOpened, { toggle: toggleDesktop }] = useDisclosure(true);
+
+    //const farmHeader = require("../assets/Alberta-farming.jpg")
 
 
 
@@ -32,15 +34,20 @@ export default function App() {
             collapsed: { mobile: !mobileOpened, desktop: !desktopOpened },
         }}
         >
-            <AppShell.Header>
-                <h1>Example Header Here</h1>
-            </AppShell.Header>
-            <AppShell.Navbar>
+            <AppShellHeader>
+                <BackgroundImage src="https://letspasta.com/wp-content/uploads/2022/08/Alberta-farming.jpg"
+                style={{ height: '100%' }} >
+                    <Center style={{ height: '100%' }}>
+                        <Text size='xl' c='white' fw='bold'>Example Header Here</Text>
+                    </Center>
+                </BackgroundImage>
+            </AppShellHeader>
+            <AppShellNavbar>
                 <ScrollArea>
                     <MarketAccordion/>
                 </ScrollArea>
-            </AppShell.Navbar>
-            <AppShell.Main>
+            </AppShellNavbar>
+            <AppShellMain>
                 <Button onClick={toggleDesktop} visibleFrom="sm" mb={'sm'}>
                     Toggle navbar
                 </Button>
@@ -48,11 +55,13 @@ export default function App() {
                     Toggle navbar
                 </Button>
 
+                <Center>
+                    <MapComponent/>
+                </Center>
+                
 
-                <MapComponent width="90%" height="500px"></MapComponent>
 
-
-            </AppShell.Main>
+            </AppShellMain>
         </AppShell>
 
     );
