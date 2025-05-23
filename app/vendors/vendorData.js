@@ -1,9 +1,13 @@
 const vendorList = [
   {
     id: 1,
-    name: "Prairie Honey Co.",
-    category: "Honey",
+    name: "Valentines Farm",
+    category: "Produce",
     location: "Calgary, AB",
+    image: "/ValentinesFarm.jpg",
+    contact: "valentinesfarm@email.com",
+    markets: ["Calgary Farmers Market", "Okotoks Saturday Market"],
+    description: "We sell raw, unfiltered wildflower honey harvested from Alberta bees."
   },
   {
     id: 2,
