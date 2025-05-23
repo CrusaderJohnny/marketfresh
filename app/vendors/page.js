@@ -17,7 +17,7 @@ export default function VendorsPage() {
     <div className="w-full max-w-7xl mx-auto px-4 py-8">
       <Title order={1} className="text-3xl font-bold mb-6 text-center">
         Our Vendors
-      </Title>x 
+      </Title>
 
       <div className="flex flex-col gap-4">
         {vendorList.map((vendor) => (
