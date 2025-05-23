@@ -1,6 +1,8 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+'use client';
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import { Button } from '@mantine/core';
+import Link from 'next/link';
 
 function Nav({ onNavigate, refs }) {
     const [header, setHeader] = useState(false);
@@ -38,22 +40,24 @@ function Nav({ onNavigate, refs }) {
                 "header fixed w-[100%] h-[14vh] bg-[#C70039] text-[white] z-50"
             }
         >
-            <div className="header flex w-[80%] h-[12vh] justify-between align-middle m-auto pt-[0.35rem] items-end">
-                <div className="relative w-[4vw] h-[4vw] rounded-full overflow-hidden">
-                    <Image
-                        src="/images/Market-Image-PlaceHolder.jpg"
-                        alt="Place Holder logo"
-                        fill
-                        style={{ objectFit: "cover" }}
-                        priority
-                    />
-                </div>
-                <div className="logo text-[1.75vw] font-sans-bold flex flex-col justify-center items-center h-full">
+            <div className="header flex w-[80%] justify-between m-auto py-[5px] items-end">
+                <Image
+                    src="/images/Market-Image-PlaceHolder.jpg"
+                    width={60}
+                    height={60}
+                    alt="Place Holder logo"
+                    style={{ objectFit: 'cover' }}
+                    priority
+                />
+                <Button variant='default' fullWidth size='xl' component={Link} href="/">
+                <div className="logo text-[24px]">
                     <h2>Market</h2>
                     <div className="pl-[3vw]">
                         <h2>Fresh</h2>
                     </div>
                 </div>
+                </Button>
+
 
                 <div className="menu">
                     <nav className="">
