@@ -1,7 +1,12 @@
-import MarketList from "./marketList";
+import Market from "./market";
+import MarketAccordion from "./marketList";
+
 
 export default function Page() {
     return(
-        <MarketList/>
+        <>
+        <MarketAccordion/>
+        <Market/>
+        </>
     )
 }

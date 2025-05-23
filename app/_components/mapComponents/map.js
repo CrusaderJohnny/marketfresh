@@ -13,6 +13,7 @@ import {APIProvider, Map, Pin, AdvancedMarker} from '@vis.gl/react-google-maps';
 import {MapLocations} from './locations';
 
 
+
 const locations = MapLocations;
 
 const PoiMarkers = ({pois}) => {
@@ -29,7 +30,7 @@ const PoiMarkers = ({pois}) => {
     );
 };
 
-function MapComponent({}) {
+function MapComponent({width,height}) {
 
     // Get API key
     const Maps_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
@@ -43,7 +44,7 @@ function MapComponent({}) {
     return (
         <div>
             <APIProvider apiKey={Maps_API_KEY} onLoad={() => console.log('Maps API has loaded.')}>
-                <div style={{ height: '100vh', width: '100%' }}>
+                <div style={{ height: height, width: width, alignSelf: "center" }}>
                     <Map
                         defaultZoom={13}
                         mapId='DEMO_MAP_ID'
