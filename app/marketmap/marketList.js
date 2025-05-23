@@ -9,6 +9,8 @@ const charactersList = [
         description: 'Home to over 100 incredible local vendors.',
         content: "In the spirit of reconciliation, we acknowledge we live, work, and play on the traditional territories of the Blackfoot Confederacy (Siksika, Kainai, Piikani), the Tsuut’ina, the Îyâxe Nakoda Nations, the Métis Nation (Region 3), and all people who make their homes in the Treaty 7 region of Southern Alberta.",
         link: "https://www.calgaryfarmersmarket.ca/",
+        lat: 0,
+        lng: 0,
     },
     {
         id: 'cochrane',
@@ -17,6 +19,8 @@ const charactersList = [
         description: 'The market in the heart of Big Hill Country',
         content: "The Cochrane Environmental Action Committee (CEAC) sponsors and operates the Cochrane Farmers’ Market. The market is run entirely by CEAC volunteers, and proceeds from the market are used to support CEAC in its efforts to make Cochrane a more environmentally aware and active community.",
         link: "https://cochranefarmersmarket.ca/",
+        lat: 0,
+        lng: 0,
     },
     {
         id: 'dalhousie',
@@ -25,6 +29,8 @@ const charactersList = [
         description: 'The Dalhousie Farmers’ Market adhere’s to the “Made, Baked, or Grown” in Alberta Rule.',
         content: 'The Dalhousie Farmers’ Market adhere’s to the “Made, Baked, or Grown” in Alberta Rule. 80% of our vendors must have products that are Alberta Made, Baked or Grown. We are an Approved Farmer’s Market and follow rules and regulations set by the Alberta Agricultural Society. By hosting a market, Dalhousie is enabling entrepreneurs to test their products and ideas while keeping costs low, interacting with the community, and learning new business skills. All funds raised by this market will go directly towards community improvement projects.',
         link: "https://www.dalhousiecalgary.ca/farmers-market/",
+        lat: 0,
+        lng: 0,
     },
 ];
 //displays the information before the accordion is opened
