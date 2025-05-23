@@ -13,12 +13,15 @@ import MapComponent from '../_components/mapComponents/map';
 import MarketAccordion from "../marketmap/marketList";
 import { Text, AppShell, Button, Center, Flex, ScrollArea , AppShellMain, AppShellNavbar, AppShellHeader, BackgroundImage } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { useRouter } from 'next/navigation'
 
 
 export default function App() {
 
     const [mobileOpened, { toggle: toggleMobile }] = useDisclosure();
     const [desktopOpened, { toggle: toggleDesktop }] = useDisclosure(true);
+
+    const router = useRouter()
 
     // Temp removed to use url for testing
     //const farmHeader = require("../assets/Alberta-farming.jpg")
@@ -37,7 +40,7 @@ export default function App() {
         >
             <AppShellHeader>
                 <BackgroundImage src="https://letspasta.com/wp-content/uploads/2022/08/Alberta-farming.jpg"
-                style={{ height: '100%' }} >
+                style={{ height: '100%' }} component="button" onClick={() => router.push('/')}>
                     <Center style={{ height: '100%' }}>
                         <Text size='xl' c='white' fw='bold'>Example Header Here</Text>
                     </Center>
