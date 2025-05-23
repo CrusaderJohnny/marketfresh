@@ -4,14 +4,15 @@
     This page is an example implementation of how many components can be placed around the page
     
     References:
-
-
+    Used official Mantine Documentation for creating headers
 
 */
 
 "use client"
 import NavMT from '../_components/nav/NavMT';
 import { AppShell, useMantineTheme, Container, Title, Text, Box } from '@mantine/core';
+
+import BoxComp from '../_components/otherComponents/boxComp'
 
 export default function MantineNavPage() {
     const theme = useMantineTheme()
@@ -51,10 +52,11 @@ export default function MantineNavPage() {
                                 scrollMarginTop: `${headerHeightVh}vh`,
                             }}
                         >
-                            <Title order={2}>Section 2: Categories</Title>
-                            <Text>
+                            {/* <Title order={2}>Section 2: Categories</Title> */}
+                            <BoxComp />
+                            {/* <Text>
                                 This section is for testing Categories Components
-                            </Text>
+                            </Text> */}
                         </Box>
 
                         {/* Section 3 */}

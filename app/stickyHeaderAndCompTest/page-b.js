@@ -1,5 +1,11 @@
 // Deprecated
 
+// Author: Daniel Asefa
+// Reference: 
+
+// Used YouTube video showing how to make sticky header in Next.js & TailwindCSS 
+// https://www.youtube.com/watch?v=YHMyYgaaEm8
+
 'use client';
 import React, { useRef } from 'react';
 import Nav from '../_components/nav/Nav';

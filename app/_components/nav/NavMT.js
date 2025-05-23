@@ -9,7 +9,6 @@ References:
 */
 "use client"
 import { AppShell, useMantineTheme, Button, Group, BackgroundImage, Title, Image } from '@mantine/core';
-// import TestLogo from '../../../public/images/Market-Image-PlaceHolder.jpeg'
 
 export default function NavMT() {
 
