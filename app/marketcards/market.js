@@ -29,5 +29,5 @@ export default function Market() {
                     </Flex>
             </Card>
         </Container>
-    )
-}
+    );
+};
