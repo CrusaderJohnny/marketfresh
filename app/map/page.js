@@ -20,6 +20,7 @@ export default function App() {
     const [mobileOpened, { toggle: toggleMobile }] = useDisclosure();
     const [desktopOpened, { toggle: toggleDesktop }] = useDisclosure(true);
 
+    // Temp removed to use url for testing
     //const farmHeader = require("../assets/Alberta-farming.jpg")
 
 
