@@ -29,7 +29,7 @@ export default function MantineNavPage() {
                     <Container size="lg" >
 
                         {/* Section 1 - Markets */}
-                        <Box
+                        <Container
                             id="section1"
                             style={{
                                 minHeight: '86vh',
@@ -37,11 +37,12 @@ export default function MantineNavPage() {
                                 scrollMarginTop: `${headerHeightVh}vh`,
                             }}
                         >
-                            <Title order={2}>Section 1: Markets</Title>
+                            {/* <Title order={2}>Section 1: Markets</Title>
                             <Text>
                                 This section is for testing Market Components
-                            </Text>
-                        </Box>
+                            </Text> */}
+                            
+                        </Container>
 
                         {/* Section 2 */}
                         <Box
@@ -53,7 +54,7 @@ export default function MantineNavPage() {
                             }}
                         >
                             {/* <Title order={2}>Section 2: Categories</Title> */}
-                            <BoxComp />
+                            {/* <BoxComp /> *   Removed BoxCompTest/}
                             {/* <Text>
                                 This section is for testing Categories Components
                             </Text> */}

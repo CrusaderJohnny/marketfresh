@@ -8,7 +8,6 @@ Used Mantine component library
 
 "use client"
 import React from 'react';
-import Nav from '../_components/nav/Nav';
 import MapComponent from '../_components/mapComponents/map';
 import MarketAccordion from "../marketmap/marketList";
 import { Text, AppShell, Button, Center, Flex, ScrollArea , AppShellMain, AppShellNavbar, AppShellHeader, BackgroundImage } from '@mantine/core';

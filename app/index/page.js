@@ -1,4 +1,4 @@
-import Nav from "../_components/nav/Nav";
+// Dan: Removed link to old header 
 import NavMT from '../_components/nav/NavMT'
 import MainSections from "./mainSection";
 
@@ -6,7 +6,6 @@ export default function Page() {
     return(
         <>
             <div>
-                <Nav/>
                 <div>
                     <MainSections/>
                 </div>
